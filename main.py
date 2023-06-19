@@ -13,9 +13,9 @@ def python():
 def ios():
   return render_template("ios.html")
 
-@app.route('/sql')
-def sql():
-  return render_template("sql.html") 
+@app.route('/resume')
+def resume():
+  return render_template("resume.html") 
 
 @app.route('/android')
 def android():
