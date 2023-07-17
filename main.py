@@ -1,24 +1,25 @@
 from flask import Flask, render_template
-app = Flask('app')
+myflaskapp = Flask(__name__)
 
-@app.route('/')
+@myflaskapp.route('/')
 def hello_world():
   return render_template("index.html")
 
-@app.route('/python')
+@myflaskapp.route('/python')
 def python():
   return render_template("python.html")
 
-@app.route('/ios')
+@myflaskapp.route('/ios')
 def ios():
   return render_template("ios.html")
 
-@app.route('/resume')
+@myflaskapp.route('/resume')
 def resume():
   return render_template("resume.html") 
 
-@app.route('/android')
+@myflaskapp.route('/android')
 def android():
   return render_template("android.html")
 
-app.run(host='0.0.0.0', port=8080)
+if __name__ == "__main__":
+    myflaskapp.run(host='0.0.0.0', port=8080)
